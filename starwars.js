@@ -30,7 +30,7 @@ function *gen(){
 	var characters = film.characters;
     var characterString = "Characters: <br>";
     for(let i = 0; i < characters.length ; i++){
-        var tempCharacterResponse = yield fetch(characters[i]);
+        var tempCharacterResponse = yield fetch(characters[i].replace('http://', 'https://'));
         var tempCharacter = yield tempCharacterResponse.json();
         characterString += tempCharacter.name + "<br>";
     }
