@@ -23,7 +23,7 @@ function *gen(){
     }
 
     //fetch the film
-	var filmResponse = yield fetch("http://swapi.co/api/films/" + document.getElementById("input").value);
+	var filmResponse = yield fetch("https://swapi.co/api/films/" + document.getElementById("input").value);
     var film = yield filmResponse.json();
 
     //fetch the characters
